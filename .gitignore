@@ -1,6 +1,11 @@
 # Compiled Lua sources
 luac.out
 
+# Luacov files
+luacov.stats.out
+luacov.report.out.index
+luacov.report.out
+
 # luarocks build files
 *.src.rock
 *.zip
@@ -39,3 +44,5 @@ luac.out
 *.x86_64
 *.hex
 
+# I still use Textmate, ignore its working files
+._*
