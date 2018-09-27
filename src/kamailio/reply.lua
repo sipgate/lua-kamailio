@@ -2,6 +2,7 @@ core = require "kamailio.core"
 
 local reply = {}
 
+-- Tested
 function reply.stateless(cause, reason)
   if cause == nil then 
     KSR.err("Can't send stateless response w/o cause!")
@@ -19,6 +20,8 @@ function reply.stateful(cause, reason)
   reason = reason or "Unknown"
   KSR.tm.t_reply(cause, reason)
 end
+
+-- Not testworthy
 
 function reply.with_stateless_error_and_exit()
   KSR.sl.sl_reply_error()
