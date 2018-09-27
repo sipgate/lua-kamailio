@@ -59,9 +59,9 @@ function actions.relay_message()
   end
 
   if KSR.tm.t_relay()<0 then
-    KSR.sl.sl_reply_error();
+    reply.with_stateless_error_and_exit()
   end
-  KSR.x.exit();
+  core.exit();
 end
 
 function actions.route_to_location()
@@ -79,7 +79,7 @@ function actions.route_to_location()
   if message.is_invite() then
     core.set_flag(FLT_ACCMISSED)
   end
-  
+
   actions.relay_message()
   core.exit()
 
