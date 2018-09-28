@@ -13,7 +13,11 @@ function core.set_branch_flag(flag)
 end
 
 function core.is_flag_set(flag)
-  return KSR.isflagset(FLT_NATS)
+  return KSR.isflagset(flag)
+end
+
+function core.is_branch_flag_set(flag)
+    return KSR.isbflagset(flag)
 end
 
 return core
